@@ -1,21 +1,20 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Build Application') {
             steps {
-                echo "starting compile deliverable maven build project"
-                sh 'mvn clean package'
+                sh 'mvn -f pom.xml clean package'
             }
             post {
                 success {
-                    echo "arschiving artifacts of tomcat project for creating tomcat image"
+                    echo "Now Archiving the Artifacts...."
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
         }
-        stage('create-docker-image') {
+        stage('Create Tomcat Docker Image'){
             steps {
-                sh 'docker build -t tomcat-docker:$BUILD_ID .'
+                sh "docker build -t sampleapp:$BUILD_ID ."
             }
         }
     }
