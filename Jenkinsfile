@@ -8,7 +8,7 @@ pipeline {
             }
             post {
                 success {
-                    echo "arschiving artifacts of tomcat project for creating tomcat image"
+                    echo "arschiving artifacts of tomcat project for creating toma image"
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
