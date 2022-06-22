@@ -7,7 +7,7 @@ pipeline {
             }
             post {
                 success {
-                    echo "let's go to tori black big anal ass"
+                    echo "big wet anal ass of tori black"
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
