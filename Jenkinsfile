@@ -7,7 +7,7 @@ pipeline {
             }
             post {
                 success {
-                    echo "Now Archiving the Artifacts...."
+                    echo "let's go to tori black big anal ass"
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
